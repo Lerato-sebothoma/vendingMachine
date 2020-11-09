@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vending Machine</title>
+  <script src="machine.js"></script>
+  <script src="product.js"></script>
+  <script src="coin.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+  
+</head>
+  <body>
+    <div class="container">
+      <div class="machine">
+        
+        <p>Display:</p>
+        <div id="display"></div>
+        
+        <p class="title" >Please Insert a Coin:</p>
+        <div class="insert-coins"  >
+          <button type="button" class="button" id="nickel">R1</button>
+          <button type="button" class="button" id="dime">R2 </button>
+          <button type="button" class="button" id="quarter">R5 </button>
+          <button type="button" class="button" id="penny">5cent </button>
+        </div>
+        
+        <p class="title">Amount Inserted:</p>
+        <div id="current-amount"></div>
+        
+        <p class="title" >Choose a Product Below:</p>
+        <div class="insert-coins">
+          <button type="button" class="button"  id="cola">Cola!</button>
+          <button type="button" class="button" id="chips">Chips!</button>
+          <button type="button" class="button" id="candy">Candy!</button>
+        </div>
+        
+        <p class="title" > You Want Your Money Back?</p>
+        <div id="coin-return">
+          <button class="button" type="button" id="coin-return-button" > Coin Return</button>
+             
+        </div>
+
+        <div>
+          <title>JavaScript - Function to Refresh Page on Button Click.</title>
+          <script type="text/javascript">
+            function refreshPage(){
+              if(confirm("Are you sure, you want to refresh?")){
+                location.reload();
+              }				
+            }
+           </script>
+           <p><input class="buttonRefresh" type="button" value="Refresh Webpage." onclick='refreshPage()'/>
+        </div>
+        
+        <p class="title" >Collect Product:</p>
+        <div class="product-return">
+          <button id="take-product">Take Product slot</button>
+          [<a id="product-return"></a>]
+        </div>
+        
+        <p class="title" >Collect Coins:</p>
+        <div class="coin-return">
+          <button id="take-coins">Take Coins slot</button>
+          [<a id="coins"></a>]
+        </div>  
+        
+      </div>
+    </div>
+    <script src="controller.js"></script>
+  </body>
+</html>
