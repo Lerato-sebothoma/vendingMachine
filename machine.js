@@ -31,7 +31,7 @@ var monies = [
 // Machine rejects 5cent but accepts R1, R2 and R5
 Machine.prototype.insertCoins = function(coin) {
 	if (coin.weight === 554) {
-		this.coin
+		this.coinReturn
 		.push(coin);
 	} else {
 		this.insertedCoins.push(coin);
